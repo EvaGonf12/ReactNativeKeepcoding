@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="65px" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>floatingButton</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="List" transform="translate(-329.000000, -796.000000)">
+            <g id="floatingButton" transform="translate(329.000000, 796.000000)">
+                <circle id="Oval" fill="#FDCE52" cx="32.5" cy="32.5" r="32.5"></circle>
+                <rect id="Rectangle" fill="#000000" x="31" y="16" width="4" height="35" rx="2"></rect>
+                <rect id="Rectangle" fill="#000000" transform="translate(33.000000, 32.500000) rotate(90.000000) translate(-33.000000, -32.500000) " x="31" y="15" width="4" height="35" rx="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
