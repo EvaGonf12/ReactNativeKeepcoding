@@ -13,15 +13,6 @@ export default StyleSheet.create({
     textAlign: 'left',
     fontFamily: 'System',
   },
-  select: {
-    color: colors.black,
-    paddingHorizontal: 10,
-    backgroundColor: colors.whiteDark,
-    borderRadius: 22,
-    height: 44,
-    fontSize: 16,
-    marginTop: 10,
-  },
   placeholder: {
     fontSize: 16,
     color: colors.grey

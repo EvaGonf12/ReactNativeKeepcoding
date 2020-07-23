@@ -5,14 +5,17 @@ import {breedsActions} from '../../../redux/breeds';
 const mapStateToProps = (state) => {
   return {
     loading: state.breeds.loading,
-    breedsList: state.breeds.list
+    breedsList: state.breeds.list,
+    total: state.breeds.total
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    initBreedsList: () => dispatch(breedsActions.initList()),
     getCatsList: () => dispatch(breedsActions.fetchBreeds()),
-    setSelectedBreed: (breed) => dispatch(breedsActions.setItem(breed))
+    setSelectedBreed: (breed) => dispatch(breedsActions.setItem(breed)),
+    fetchNextCatsPage: () => dispatch(breedsActions.fetchNextPage()),
   };
 };
 

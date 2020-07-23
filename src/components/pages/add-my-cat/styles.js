@@ -4,9 +4,29 @@ import colors from '../../../assets/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  containerScroll: {
+    flex: 1,
     flexDirection: 'column',
-    justifyContent: "flex-start",
     marginHorizontal: 20
+  },
+  imageContainer: {
+    marginTop: 20,
+    marginBottom: 20,
+    borderRadius: 18,
+    height: 200,
+    backgroundColor: colors.whiteDark,
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden',
+  },
+  imageLabel: {
+    color: colors.grey,
+    fontSize: 16,
+    fontWeight: '400',
+    textAlign: 'left',
+    fontFamily: 'System',
+    marginTop: 10
   },
   img: {
     marginTop: 0,
@@ -17,13 +37,12 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   button: {
-    marginTop: 50
+    marginTop: 20
   },
   errorContainer: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    marginTop: '10',
+    marginBottom: 20,
   },
   errorIcon: {},
   errorTxt: {
@@ -32,6 +51,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     textAlign: 'left',
     fontFamily: 'System',
+    marginLeft: 10,
+    paddingTop: 2
   }
 });
 

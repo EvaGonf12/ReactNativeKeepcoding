@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getBreedsNames: () => dispatch(breedsActions.getBreedsNames()),
-    postMyCat: (data) => dispatch(myCatsActions.postCat(data))
+    onSubmit: (data) => dispatch(myCatsActions.postCat(data))
   };
 };
 

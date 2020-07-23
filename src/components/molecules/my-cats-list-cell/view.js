@@ -8,11 +8,14 @@ import images from '../../../assets/images';
 class MyCatsListCell extends React.Component {
   render() {
     const {catInfo} = this.props;
-
+    const image = catInfo.image
+      ? {uri: catInfo.image, scale: 1}
+      : images.cat;
+    console.log(catInfo.image)
     return (
       <View style={[styles.container]}>
-        <Image resizeMode="center" source={images.cat} style={styles.image} />
-        <View style={styles.infoContainer}>
+         <Image resizeMode="center" source={image} style={styles.image} />
+          <View style={styles.infoContainer}>
           <Text style={styles.title}>{catInfo.name}</Text>
           <View style={styles.catInfo}>
             <View style={styles.info}>

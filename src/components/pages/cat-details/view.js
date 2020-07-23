@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {ScrollView, View, Image} from 'react-native';
 import styles from './styles';
-import {Actions} from 'react-native-router-flux';
 
 // ATOMS
 import {MenuImageBg, Title, Paragraph} from '../../atoms';
@@ -16,10 +15,7 @@ class CatBreedDetails extends React.Component {
   }
 
   render() {
-    const loading = this.props.loading;
     const breed = this.props.breed;
-    console.log("BREED!!!!!")
-    console.log(breed)
     return (
       <ScrollView style={styles.container}>
         <MenuImageBg image={breed.imageURL} />
@@ -38,7 +34,6 @@ class CatBreedDetails extends React.Component {
           <Image
             resizeMode={'cover'}
             source={Images[`rating${breed.adaptability}`]}
-            //source={Rating[breed.affection_level]}
             style={styles.img}
           />
         </View>
@@ -47,7 +42,6 @@ class CatBreedDetails extends React.Component {
           <Image
             resizeMode={'cover'}
             source={Images.rating0}
-            //source={Rating[breed.child_friendly]}
             style={styles.img}
           />
         </View>
@@ -56,7 +50,6 @@ class CatBreedDetails extends React.Component {
           <Image
             resizeMode={'cover'}
             source={Images[`rating${breed.adaptability}`]}
-            //source={Rating[breed.energy_level]}
             style={styles.img}
           />
         </View>
@@ -65,7 +58,6 @@ class CatBreedDetails extends React.Component {
           <Image
             resizeMode={'cover'}
             source={Images[`rating${breed.adaptability}`]}
-            //source={Rating[breed.intelligence]}
             style={styles.img}
           />
         </View>
@@ -74,7 +66,6 @@ class CatBreedDetails extends React.Component {
           <Image
             resizeMode={'cover'}
             source={Images[`rating${breed.adaptability}`]}
-            //source={Rating[breed.energy_level]}
             style={styles.img}
           />
         </View>

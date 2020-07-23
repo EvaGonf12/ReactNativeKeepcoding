@@ -1,6 +1,8 @@
 import * as types from './types';
 import * as api from '../../api';
 import {Alert} from 'react-native';
+import {Actions} from 'react-native-router-flux';
+
 
 function updateList(newList) {
   const action = {
@@ -37,8 +39,10 @@ export const fetchMyCats = () => {
 };
 
 export const postCat = (data) => {
+  console.log("POST CAT")
   return async (dispatch, getState) => {
     const myCatsList = getState().myCats.list;
+    console.log(data)
     if (!myCatsList || !data) {
       Alert.alert('Error', 'Data is not completed');
       return;
@@ -46,7 +50,7 @@ export const postCat = (data) => {
     myCatsList.push(data)
     dispatch(setLoading(true));
     dispatch(fetchMyCats());
-    Alert.alert('Cat Added', `${data.nombre} has been added correctly!`, [
+    Alert.alert('Cat Added', `${data.name} has been added correctly!`, [
       {text: 'OK', onPress: Actions.pop},
     ]);
     dispatch(setLoading(false));

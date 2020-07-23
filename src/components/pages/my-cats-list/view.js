@@ -22,20 +22,7 @@ class MyCatsList extends React.Component {
   render() {
     const loading = this.props.loading;
     const myCatsList = this.props.myCatsList;
-    const myCatsList2 = [
-      {
-        name: "Tobias",
-        birth: "05-05-2015",
-        breed: "Angora",
-        weight: "4,5 Kg"
-      },
-      {
-        name: "Mafalda",
-        birth: "14-04-2018",
-        breed: "Angora",
-        weight: "5,9 Kg"
-      }
-    ]
+    console.log(myCatsList)
     return (
       <SafeAreaView style={styles.container}>
         <FlatList

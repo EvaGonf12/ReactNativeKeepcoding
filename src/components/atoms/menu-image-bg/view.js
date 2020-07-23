@@ -7,10 +7,8 @@ import styles from './styles';
 class MenuImageBg extends React.Component {
   render() {
     const image = {uri: this.props.image} 
-
     return (
-      <Image resizeMode={'cover'} source={image} style={styles.image}>
-      </Image>
+      <Image resizeMode={"cover"} source={image} style={styles.image}/>
     );
   }
 }

@@ -9,7 +9,9 @@ const images = {
     card2: require("./my_cats.png"),
     cat: require("./cat.png"),
     error: require("./error_icon.png"),
-    cat_menu: require("./cat_menu.png")
+    cat_menu: require("./cat_menu.png"),
+    loading: require("./loading.json"),
+    addPhoto: require("./add_photo.png")
   };
   
   export default images;

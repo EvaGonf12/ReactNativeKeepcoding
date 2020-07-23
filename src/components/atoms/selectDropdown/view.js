@@ -2,28 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Text, View} from 'react-native';
 import styles from './styles';
-import Picker from 'react-native-picker-select';
-import colors from '../../../assets/colors';
+import {Picker} from '@react-native-community/picker';
 
 class SelectDropdown extends React.Component {
+  state = {
+    breed: "Aegean",
+  };
+
   render() {
     const {onValueChange, names, label, customStyle} = this.props;
-    const pickerStyle = {
-      inputIOS: styles.select,
-      placeholder: styles.placeholder,
-      inputAndroid: styles.select,
-  };
+    
+    let items = names.map( (s, i) => {
+      return <Picker.Item key={i} value={s.value} label={s.label} />
+    });
     return (
       <View style={[styles.container, customStyle]}>
         <Text style={styles.title}>{label}</Text>
         <Picker
-          style={pickerStyle}
-          onValueChange={onValueChange}
-          items={names}
-          placeholderTextColor="red"
-          placeholder={{label: 'Select a breed', value: null}}
-          doneText="Select"
-        />
+          selectedValue={this.state.breed}
+          onValueChange={(itemValue, itemIndex) => {
+            this.setState({breed: itemValue})
+            onValueChange(itemValue)
+          }}
+        >
+          {items}
+        </Picker>
       </View>
     );
   }
