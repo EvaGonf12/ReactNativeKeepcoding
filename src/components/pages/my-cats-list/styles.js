@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     height: 104,
-    backgroundColor: colors.whiteDark,
+    width: '100%',
+    backgroundColor: colors.white,
     borderRadius: 12,
     marginBottom: 20
   },
@@ -33,11 +34,22 @@ const styles = StyleSheet.create({
     fontWeight: '500'
   },
   info: {
-    color: colors.grey,
-    marginTop: 10,
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 8,
+    marginRight: 20,
+    marginLeft: 10
+  },
+  itemInfoTitle: {
+    color: colors.black,
     fontSize: 14,
-    fontWeight: '400',
-    fontStyle: 'italic'
+    fontWeight: '500'
+  },
+  itemInfoTxt: {
+    color: colors.grey,
+    fontSize: 14,
+    fontWeight: '400'
   }
 });
 

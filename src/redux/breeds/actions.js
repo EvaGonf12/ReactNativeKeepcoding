@@ -10,6 +10,15 @@ function updateList(newList) {
   return action;
 }
 
+function updateNames(newList) {
+  console.log("UPDATE NAMES")
+  const action = {
+    type: types.UPDATE_NAMES,
+    payload: {names: newList}
+  };
+  return action;
+}
+
 const setLoading = (loading) => {
   const action = {
     type: types.SET_LOADING,
@@ -19,7 +28,6 @@ const setLoading = (loading) => {
 };
 
 export const setItem = (item) => {
-    console.log("SET ITEM")
   const action = {
     type: types.SET_ITEM,
     payload: {item: item},
@@ -28,7 +36,6 @@ export const setItem = (item) => {
 };
 
 export const getBreed = () => {
-    console.log("GET BREED")
   return (dispatch, getState) => {
     const breed = getState().breeds.item;
     console.log(getState().breeds)
@@ -52,15 +59,39 @@ export const fetchBreeds = () => {
           element['imageURL'] = imageData.data[0].url;
         }),
       );
-      console.log(list);
       dispatch(updateList(list));
     } catch (error) {
       Alert.alert(
         'Error',
-        e.message || 'Ha ocurrido un error al obtener el listado',
+        e.message || 'Has been an error on get breeds',
       );
     } finally {
       dispatch(setLoading(false));
     }
   };
 };
+
+export const getBreedsNames = () => {
+  return async (dispatch, getState) => {
+    try {
+      dispatch(setLoading(true));
+      const getBreedsRes = await api.getBreeds();
+      const list = getBreedsRes.data;
+      const names = []
+      await Promise.all(
+        list.map(element => {
+          names.push({label: element.name, value: element.name})
+        })
+      );
+      console.log(names);
+      dispatch(updateNames(names));
+    } catch (error) {
+      Alert.alert(
+        'Error',
+        e.message || 'Has been an error on get breeds',
+      );
+    } finally {
+      dispatch(setLoading(false));
+    }
+  };
+}

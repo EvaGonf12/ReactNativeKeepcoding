@@ -24,7 +24,3 @@ export const getDetails = categoryId => {
   return instance.get(url);
 };
 
-export const addBreed = () => {
-  const url = '';
-  return instance.get(url);
-};

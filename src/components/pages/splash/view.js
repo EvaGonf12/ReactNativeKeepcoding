@@ -17,7 +17,7 @@ class Splash extends React.Component {
 
   _start = () => {
     console.log('GOTO HOME');
-    Actions.push('CatsList', {title: "Breeds"});
+    Actions.push('Contents', {title: "Cats App"});
   };
 
   render() {

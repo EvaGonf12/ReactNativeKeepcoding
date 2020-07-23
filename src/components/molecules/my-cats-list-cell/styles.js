@@ -8,13 +8,15 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     height: 104,
     backgroundColor: colors.whiteDark,
+    marginHorizontal: 20,
     borderRadius: 12,
-    marginBottom: 20
+    marginTop: 20
   },
   image: {
     width: 80,
     height: 80,
     borderRadius: 40,
+    backgroundColor: colors.white,
     marginLeft: 20,
     marginRight: 10,
     marginTop: 12
@@ -22,8 +24,6 @@ const styles = StyleSheet.create({
   infoContainer: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
     marginVertical: 12,
     marginRight: 10
   },
@@ -32,12 +32,29 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '500'
   },
+  catInfo: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: "flex-start",
+    marginTop: 5
+  },
   info: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: "space-between",
+  },
+  itemInfoTitle: {
+    color: colors.black,
+    fontSize: 14,
+    fontWeight: '400'
+  },
+  itemInfoTxt: {
     color: colors.grey,
-    marginTop: 10,
     fontSize: 14,
     fontWeight: '400',
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    marginRight: 20,
+    textAlign: "left"
   }
 });
 
