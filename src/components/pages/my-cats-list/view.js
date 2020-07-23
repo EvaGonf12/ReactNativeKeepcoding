@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {SafeAreaView, FlatList, RefreshControl} from 'react-native';
 import styles from './styles';
+import {Actions} from 'react-native-router-flux';
 
 // ATOMS 
 import {FloatingButton} from "../../atoms";
@@ -22,13 +23,23 @@ class MyCatsList extends React.Component {
     <MyCatsListCell catInfo={item}/>
   );
 
+  _onPress = () => {
+    Actions.push('AddMyCat')
+  }
+
   render() {
     const loading = this.props.loading;
     const myCatsList = this.props.myCatsList;
     console.log(myCatsList)
     return (
       <SafeAreaView style={styles.container}>
+        {
+          loading ? 
+          <LottieView style={styles.lottie} source={images.loading} autoPlay loop />
+          : null
+        }
         <FlatList
+          style={styles.list}
           data={myCatsList}
           keyExtractor={(item, index) => `my-cat-${index}`}
           renderItem={this._renderItem}
@@ -43,7 +54,9 @@ class MyCatsList extends React.Component {
             />
           }
         />
-        <FloatingButton style={styles.floatingButton}/>
+        <FloatingButton 
+          style={styles.floatingButton} 
+          onPress={this._onPress}/>
       </SafeAreaView>
     );
   }

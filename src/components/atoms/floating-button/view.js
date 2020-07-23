@@ -1,26 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {TouchableOpacity, Text, ActivityIndicator} from "react-native";
+import {TouchableOpacity, Image} from "react-native";
 import styles from "./styles";
 
-class FloatingButton extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        width: 65,
-        height: 65
-      };
-    }
+import images from "../../../assets/images"
 
+class FloatingButton extends React.Component {
     render() {
-      const {character} = this.props;
-      const image = require("../../../assets/images/floatingButton.svg");
+      const {customStyle, onPress} = this.props;
 
       return (
         <TouchableOpacity
-          style={{...styles.button, ...style}}
-          onPress={loading ? null : onPress}>
-          <Image source={image}  style={styles.image}/>
+          style={[styles.button, customStyle]}
+          onPress={onPress}>
+          <Image resizeMode="cover" source={images.floatingButton}/>
         </TouchableOpacity>
       );
     }
@@ -28,11 +21,12 @@ class FloatingButton extends React.Component {
 
   FloatingButton.defaultProps = {
     onPress: () => {},
-    style: {},
+    customStyle: {},
   };
   
   FloatingButton.propTypes = {
-    onPress: PropTypes.func
+    onPress: PropTypes.func,
+    customStyle: PropTypes.object
   };
   
   export default FloatingButton;

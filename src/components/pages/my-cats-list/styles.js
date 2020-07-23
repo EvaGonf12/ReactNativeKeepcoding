@@ -4,13 +4,17 @@ import colors from '../../../assets/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    justifyContent: "space-between",
     height: 104,
-    width: '100%',
+    alignItems: "flex-end", 
     backgroundColor: colors.white,
     borderRadius: 12,
-    marginBottom: 20
+    marginBottom: 20,
+    marginHorizontal: 20
+  },
+  list: {
+    width: "100%"
   },
   image: {
     width: 80,
@@ -23,8 +27,6 @@ const styles = StyleSheet.create({
   infoContainer: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
     marginVertical: 12,
     marginRight: 10
   },
@@ -50,7 +52,11 @@ const styles = StyleSheet.create({
     color: colors.grey,
     fontSize: 14,
     fontWeight: '400'
-  }
+  },
+  lottie: {
+    height: 120,
+    width: "100%",
+  },
 });
 
 export default styles;

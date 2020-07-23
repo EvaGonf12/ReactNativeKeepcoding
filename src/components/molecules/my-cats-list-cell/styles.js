@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     height: 104,
     backgroundColor: colors.whiteDark,
-    marginHorizontal: 20,
     borderRadius: 12,
     marginTop: 20
   },

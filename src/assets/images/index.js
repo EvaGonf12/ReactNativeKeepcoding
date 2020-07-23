@@ -11,7 +11,8 @@ const images = {
     error: require("./error_icon.png"),
     cat_menu: require("./cat_menu.png"),
     loading: require("./loading.json"),
-    addPhoto: require("./add_photo.png")
+    addPhoto: require("./add_photo.png"),
+    floatingButton: require("./floatingButton.png")
   };
   
   export default images;
