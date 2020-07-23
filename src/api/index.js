@@ -5,7 +5,7 @@ const api_key = '1d7c28d4-5752-458b-a1e8-b7b6eded03d7';
 
 const instance = axios.create({
   baseURL: BASE_URL,
-  headers: {'Content-Type': 'application/json', "api_key": api_key},
+  headers: {'Content-Type': 'application/json', "x-api_key": api_key},
 });
 
 export const getBreeds = () => {

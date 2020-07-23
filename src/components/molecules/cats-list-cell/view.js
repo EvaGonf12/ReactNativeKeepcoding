@@ -26,6 +26,7 @@ class CatsListCell extends React.Component {
           <Text style={styles.title}>{catInfo.name}</Text>
           <Text style={styles.info}>{catInfo.temperament}</Text>
         </View>
+        
       </TouchableOpacity>
     );
   }

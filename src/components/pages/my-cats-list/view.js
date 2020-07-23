@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import {SafeAreaView, FlatList, RefreshControl} from 'react-native';
 import styles from './styles';
 
+// ATOMS 
+import {FloatingButton} from "../../atoms";
+
 // MOLECULES
 import {MyCatsListCell} from "../../molecules";
 
@@ -40,6 +43,7 @@ class MyCatsList extends React.Component {
             />
           }
         />
+        <FloatingButton style={styles.floatingButton}/>
       </SafeAreaView>
     );
   }
